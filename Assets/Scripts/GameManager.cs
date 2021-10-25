@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
     bool gamePaused = false;
     bool gameOver = false;
-   
+
+ 
 
     [SerializeField] Spaceship player;
     [SerializeField] GameObject pauseUI;
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
         pauseUI.SetActive(false);
         gameOverUI.SetActive(false);
 
+     
+
     }
 
     // Update is called once per frame
@@ -27,8 +30,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P) && gameOver == false)
             PauseGame();
-
-       
+               
     }
 
     public void StartGame()
@@ -55,7 +57,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = gamePaused ? 0 : 1;
     }
 
-    
+   
 
     public void ReducirNumEnemigos()
     {
